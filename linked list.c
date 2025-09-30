@@ -13,7 +13,7 @@ struct Node* createNode(int data){
 struct Node* insertAtBeginning(struct Node* head, int data) {
     struct Node* newNode = createNode(data);
     newNode->next = head;
-    return newNode; // New head
+    return newNode; 
 }
 void print(struct Node *head){
     struct Node* temp=head;
