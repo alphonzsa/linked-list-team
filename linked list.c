@@ -10,6 +10,11 @@ struct Node* createNode(int data){
     newNode->next=NULL;
     return newNode;
 }
+struct Node* insertAtBeginning(struct Node* head, int data) {
+    struct Node* newNode = createNode(data);
+    newNode->next = head;
+    return newNode; // New head
+}
 void print(struct Node *head){
     struct Node* temp=head;
     while(temp!=NULL){
@@ -21,6 +26,7 @@ void print(struct Node *head){
 void main(){
     struct Node*head=createNode(12);
     head->next=NULL;
+    head = insertAtBeginning(head, 11);
     printf("Roll numbers in linked list : ");
     print(head);
 }
